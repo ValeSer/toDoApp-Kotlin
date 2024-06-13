@@ -21,3 +21,14 @@ fun main() {
     }
 }
 
+fun viewTodoList(todoList: MutableList<String>) {
+    if (todoList.isEmpty()) {
+        println("Your to-do list is empty.")
+    } else {
+        println("Your To-Do List:")
+        todoList.forEachIndexed { index, item ->
+            println("${index + 1}. $item")
+        }
+    }
+}
+
