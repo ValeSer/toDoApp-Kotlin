@@ -43,3 +43,13 @@ fun addItem(todoList: MutableList<String>) {
     }
 }
 
+fun removeItem(todoList: MutableList<String>) {
+    print("Enter the number of the item to remove: ")
+    val itemNumber = readlnOrNull()?.toIntOrNull()
+    if (itemNumber != null && itemNumber in 1..todoList.size) {
+        todoList.removeAt(itemNumber - 1)
+        println("Item removed.")
+    } else {
+        println("Invalid item number.")
+    }
+}
