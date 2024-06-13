@@ -32,3 +32,14 @@ fun viewTodoList(todoList: MutableList<String>) {
     }
 }
 
+fun addItem(todoList: MutableList<String>) {
+    print("Enter an item to add: ")
+    val item = readlnOrNull()
+    if (!item.isNullOrBlank()) {
+        todoList.add(item)
+        println("Item added.")
+    } else {
+        println("Invalid item.")
+    }
+}
+
